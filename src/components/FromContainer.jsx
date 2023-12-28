@@ -71,12 +71,12 @@ export const FromContainer = ({ DropEnd, fields, formName , remove}) => {
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Add Field</DialogTitle>
         <DialogContent>
-          {lastDropped?.name === eleList.textField && (
+          {lastDropped?.name !== eleList.button && (
             <TextField
               autoFocus
               margin="dense"
               id="name"
-              label="Field Title"
+              label="Field key"
               type="text"
               fullWidth
               value={title || ''}
@@ -88,21 +88,7 @@ export const FromContainer = ({ DropEnd, fields, formName , remove}) => {
              
             />
           )}
-          {lastDropped?.name === eleList.textArea && (
-            <TextField
-              autoFocus
-              margin="dense"
-              id="name"
-              label="Field Title"
-              type="text"
-              fullWidth
-              value={title || ''}
-              variant="standard"
-              onChange={({ target: { value = '' } = {} }) =>
-                setNodalData((q) => ({ ...q, title: value }))
-              }
-            />
-          )}
+          
           <TextField
             autoFocus
             margin="dense"

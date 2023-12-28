@@ -17,6 +17,11 @@ const navConfig = [
     path: '/user',
     icon: icon('ic_user'),
   },
+  {
+    title: 'Form Data',
+    path: '/form/data',
+    icon: icon('ic_lock'),
+  },
   // {
   //   title: 'product',
   //   path: '/products',
